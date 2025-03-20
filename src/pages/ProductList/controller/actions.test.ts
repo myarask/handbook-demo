@@ -27,7 +27,6 @@ test("handleGoToNextPage", () => {
   useProductList.setState({ page: 1 });
   handleGoToNextPage();
   expect(useProductList.getState().page).toBe(2);
-  useProductList.setState({ page: 2 });
   handleGoToNextPage();
   expect(useProductList.getState().page).toBe(2);
 });
@@ -36,7 +35,6 @@ test("handleGoToPreviousPage", () => {
   useProductList.setState({ page: 2 });
   handleGoToPreviousPage();
   expect(useProductList.getState().page).toBe(1);
-  useProductList.setState({ page: 1 });
   handleGoToPreviousPage();
   expect(useProductList.getState().page).toBe(1);
 });
