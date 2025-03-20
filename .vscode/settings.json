@@ -1,3 +1,7 @@
 {
-  // "github.copilot.chat.codeGeneration.instructions":
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "Apply the following instructions to unit testing only: Use vitest for testing. Do not use describe blocks. Write one test per return statement. Write one test per thrown error. Do not test the same outcome twice."
+    }
+  ]
 }

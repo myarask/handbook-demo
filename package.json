@@ -21,11 +21,14 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
     "typescript": "^5.8.2",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "vitest": "^3.0.9"
   },
   "scripts": {
     "dev": "vite",
+    "test": "vitest",
     "build": "vite build",
     "preview": "vite preview"
   },
