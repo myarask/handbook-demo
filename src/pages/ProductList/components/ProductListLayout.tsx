@@ -20,6 +20,7 @@ const ProductListLayout = () => {
         <tbody>
           <ProductListResults />
         </tbody>
+
         <tfoot>
           <ProductListPagination />
         </tfoot>

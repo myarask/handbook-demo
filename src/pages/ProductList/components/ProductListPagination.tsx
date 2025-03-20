@@ -10,12 +10,25 @@ export const ProductListPagination = () => {
   const { page } = useProductList();
 
   return (
-    <div>
-      <button onClick={handleGoToFirstPage}>{"<<"}</button>
-      <button onClick={handleGoToPreviousPage}>{"<"}</button>
-      <button>{page}</button>
-      <button onClick={handleGoToNextPage}>{">"}</button>
-      <button onClick={handleGoToLastPage}>{">>"}</button>
-    </div>
+    <tr>
+      <td colSpan={3}>
+        <button onClick={handleGoToFirstPage} aria-label="Go to the first page">
+          {"<<"}
+        </button>
+        <button
+          onClick={handleGoToPreviousPage}
+          aria-label="Go to the previous page"
+        >
+          {"<"}
+        </button>
+        <button>{page}</button>
+        <button onClick={handleGoToNextPage} aria-label="Go to the next page">
+          {">"}
+        </button>
+        <button onClick={handleGoToLastPage} aria-label="Go to the last page">
+          {">>"}
+        </button>
+      </td>
+    </tr>
   );
 };
