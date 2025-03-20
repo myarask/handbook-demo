@@ -10,6 +10,8 @@ declare global {
   // @ts-ignore
   var test: typeof test;
   // @ts-ignore
+  var it: typeof it;
+  // @ts-ignore
   var beforeAll: typeof beforeAll;
   // @ts-ignore
   var afterAll: typeof afterAll;

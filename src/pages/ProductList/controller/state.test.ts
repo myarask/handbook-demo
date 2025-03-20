@@ -1,6 +1,10 @@
 import { useProductList } from "./state";
 
-test("should initialize with default state", () => {
+test("initial state", () => {
   const state = useProductList.getState();
-  expect(state).toMatchSnapshot();
+  expect(state).toEqual({
+    searchTerm: "",
+    pageSize: 10,
+    page: 1,
+  });
 });

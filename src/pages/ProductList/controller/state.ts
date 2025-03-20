@@ -1,8 +1,5 @@
 import { create } from "zustand";
 import type { State } from "./state.types";
+import { initialState } from "./state.constants";
 
-export const useProductList = create<State>()(() => ({
-  searchTerm: "",
-  pageSize: 10,
-  page: 0,
-}));
+export const useProductList = create<State>()(() => initialState);
