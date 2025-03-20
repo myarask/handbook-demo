@@ -8,10 +8,7 @@ export const fetchProducts = async ({
   searchTerm,
   offset,
 }: ProductListQueryArgs): Promise<ProductListQueryResults> => {
-  let params = `limit=${limit}`;
-
-  if (searchTerm) params += `&q=${searchTerm}`;
-  if (offset) params += `&skip=${offset}`;
+  const params = `limit=${limit}&q=${searchTerm}&skip=${offset}`;
 
   const res = await fetch(`https://dummyjson.com/products/search?${params}`, {
     headers: { "Content-Type": "application/json" },
