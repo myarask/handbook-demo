@@ -1,4 +1,4 @@
-import { Component, type ErrorInfo } from "react";
+import { Component, ErrorInfo } from "react";
 import type {
   ErrorBoundaryProps,
   ErrorBoundaryState,
