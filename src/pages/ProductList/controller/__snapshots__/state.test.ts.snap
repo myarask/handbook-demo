@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should initialize with default state 1`] = `
+{
+  "page": 1,
+  "pageSize": 10,
+  "searchTerm": "",
+}
+`;

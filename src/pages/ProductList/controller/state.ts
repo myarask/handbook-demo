@@ -4,5 +4,5 @@ import type { State } from "./state.types";
 export const useProductList = create<State>()(() => ({
   searchTerm: "",
   pageSize: 10,
-  page: 1,
+  page: 0,
 }));
