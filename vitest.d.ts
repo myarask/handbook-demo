@@ -15,4 +15,8 @@ declare global {
   var beforeAll: typeof beforeAll;
   // @ts-ignore
   var afterAll: typeof afterAll;
+  // @ts-ignore
+  var beforeEach: typeof beforeEach;
+  // @ts-ignore
+  var afterEach: typeof afterEach;
 }
