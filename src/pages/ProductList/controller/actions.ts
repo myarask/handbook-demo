@@ -1,5 +1,5 @@
 import { useProductList } from "./state";
-import { getLastPage } from "./actions.utils";
+import { getLastPage } from "./utils";
 
 export const handleGoToFirstPage = () => {
   useProductList.setState({ page: 1 });

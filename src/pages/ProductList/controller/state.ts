@@ -1,7 +1,10 @@
 import { create } from "zustand";
-import type { State } from "./state.types";
 
-export const useProductList = create<State>()(() => ({
+export const useProductList = create<{
+  searchTerm: string;
+  pageSize: number;
+  page: number;
+}>()(() => ({
   searchTerm: "",
   pageSize: 10,
   page: 1,

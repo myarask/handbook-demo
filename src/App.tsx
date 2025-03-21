@@ -5,7 +5,7 @@ import { client } from "./apollo";
 import { Home } from "./pages/Home/Home";
 import { MissionLauncher } from "./pages/Mission/MissionLauncher";
 import { ProductListPage } from "./pages/ProductList/ProductListPage";
-import { queryClient } from "./react-query";
+import { queryClient } from "./clients/react-query";
 
 export const App = () => {
   return (

@@ -6,9 +6,9 @@ import {
   handleSearchProduct,
 } from "./actions";
 import { useProductList } from "./state";
-import { getLastPage } from "./actions.utils";
+import { getLastPage } from "./utils";
 
-vi.mock("./actions.utils");
+vi.mock("./utils");
 vi.mocked(getLastPage).mockReturnValue(2);
 
 test("handleGoToFirstPage", () => {

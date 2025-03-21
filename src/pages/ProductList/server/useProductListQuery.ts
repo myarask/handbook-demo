@@ -1,7 +1,28 @@
 import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "../../../hooks/useDebounce";
 import { useProductList } from "../controller/state";
-import { fetchProducts } from "./useProductListQuery.utils";
+import {
+  ProductListQueryArgs,
+  ProductListQueryResults,
+} from "./useProductListQuery.types";
+
+const fetcher = async ({
+  limit,
+  searchTerm,
+  offset,
+}: ProductListQueryArgs): Promise<ProductListQueryResults> => {
+  const params = `limit=${limit}&q=${searchTerm}&skip=${offset}`;
+
+  const res = await fetch(`https://dummyjson.com/products/search?${params}`, {
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch products");
+  }
+
+  return res.json();
+};
 
 export const useProductListQuery = () => {
   const { searchTerm, page, pageSize } = useProductList((state) => state);
@@ -16,6 +37,6 @@ export const useProductListQuery = () => {
 
   return useQuery({
     queryKey: ["products", debouncedSearchTerm, args],
-    queryFn: () => fetchProducts(args),
+    queryFn: () => fetcher(args),
   });
 };

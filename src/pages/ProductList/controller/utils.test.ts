@@ -1,5 +1,5 @@
-import { getLastPage } from "./actions.utils";
-import { queryClient } from "../../../react-query";
+import { getLastPage } from "./utils";
+import { queryClient } from "../../../clients/react-query";
 
 vi.mock("../../../react-query");
 

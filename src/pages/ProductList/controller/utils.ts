@@ -1,4 +1,4 @@
-import { queryClient } from "../../../react-query";
+import { queryClient } from "../../../clients/react-query";
 import { useProductList } from "./state";
 import type { ProductListQueryResults } from "../server/useProductListQuery.types";
 
