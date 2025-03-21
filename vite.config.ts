@@ -16,5 +16,8 @@ export default defineConfig({
     setupFiles: "./setupTests.js", // Path to the setup file
     environment: "jsdom", // Needed for React projects
     exclude: [...configDefaults.exclude, "node_modules/"],
+    coverage: {
+      exclude: ["**/*.constants.ts"], // Exclude all files ending with .constants.ts
+    },
   },
 });
