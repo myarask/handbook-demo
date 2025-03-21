@@ -1,4 +1,4 @@
-import { fetchProducts } from "./fetchProducts";
+import { fetchProducts } from "./useProductListQuery.utils";
 import { Mock, vi } from "vitest";
 
 test("fetchProducts", async () => {

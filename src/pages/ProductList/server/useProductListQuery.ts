@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "../../../hooks/useDebounce";
 import { useProductList } from "../controller/state";
-import { fetchProducts } from "./fetchProducts";
+import { fetchProducts } from "./useProductListQuery.utils";
 
 export const useProductListQuery = () => {
   const { searchTerm, page, pageSize } = useProductList((state) => state);
