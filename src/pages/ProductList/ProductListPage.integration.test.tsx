@@ -1,15 +1,7 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
 import { ProductListPage } from "./ProductListPage";
 import { mockProductListData } from "./server/useProductListQuery.mock";
-import nock from "nock";
 import { MockQueryClientProvider } from "../../clients/react-query.utils";
-
-nock("https://dummyjson.com")
-  .get("/products/search?limit=10&q=&skip=0")
-  .reply(200, mockProductListData)
-  .get("/products/search?limit=10&q=fragrance&skip=0")
-  .reply(200, mockProductListData);
 
 test("I can browse products", async () => {
   render(
