@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from "@apollo/client";
 import { GET_LATEST_LAUNCH } from "./queries";
-import type { LatestLaunch } from "../../types";
+import type { LatestLaunch } from "./types";
 
 const MissionPage = () => {
   // "loading" state is managed by an upstream Suspense component.
