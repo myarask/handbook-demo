@@ -1,6 +1,6 @@
 import { ProductListItem } from "./ProductListItem";
 import { useProductListQuery } from "../server/useProductListQuery";
-import { usePrevious } from "../../../hooks/usePrevious";
+import { usePrevious } from "../hooks/usePrevious";
 
 const Loading = () => (
   <tr>
