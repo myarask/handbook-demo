@@ -5,6 +5,6 @@ export const mockQueryClient = new QueryClient({
   defaultOptions: { queries: { retry: false } },
 });
 
-export const MockQueryClientProvider = (props: { children?: ReactNode }) => (
+export const TestQueryClientProvider = (props: { children?: ReactNode }) => (
   <QueryClientProvider client={mockQueryClient} {...props} />
 );
