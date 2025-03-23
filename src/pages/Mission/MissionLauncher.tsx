@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { lazy, Suspense } from "react";
-import { GET_LATEST_LAUNCH } from "../../queries";
+import { GET_LATEST_LAUNCH } from "./queries";
 
 // Component is loaded asyncronously, allowing the parent bundle to be smaller.
 const MissionPage = lazy(() => import("./MissionPage"));

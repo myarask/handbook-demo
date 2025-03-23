@@ -3,7 +3,7 @@ import {
   createQueryPreloader,
   InMemoryCache,
 } from "@apollo/client";
-import { GET_LATEST_LAUNCH } from "./queries";
+import { GET_LATEST_LAUNCH } from "../pages/Mission/queries";
 
 export const client = new ApolloClient({
   uri: "https://spacex-production.up.railway.app/",

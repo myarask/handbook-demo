@@ -1,11 +1,11 @@
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router";
-import { client } from "./apollo";
-import { Home } from "./pages/Home/Home";
-import { MissionLauncher } from "./pages/Mission/MissionLauncher";
-import { ProductListPage } from "./pages/ProductList/ProductListPage";
-import { queryClient } from "./clients/react-query";
+import { client } from "../clients/apollo";
+import { Home } from "../pages/Home/Home";
+import { MissionLauncher } from "../pages/Mission/MissionLauncher";
+import { ProductListPage } from "../pages/ProductList/ProductListPage";
+import { queryClient } from "../clients/react-query";
 
 export const App = () => {
   return (
