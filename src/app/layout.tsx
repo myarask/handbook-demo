@@ -1,10 +1,13 @@
-import { Outlet } from "react-router";
-import { AppNavigation } from "./components/Navigation";
+import { NavLink, Outlet } from "react-router";
 
 export const AppLayout = () => {
   return (
     <div>
-      <AppNavigation />
+      <nav>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/mission">Last Mission</NavLink>
+        <NavLink to="/products">Products</NavLink>
+      </nav>
       <main>
         <Outlet />
       </main>
