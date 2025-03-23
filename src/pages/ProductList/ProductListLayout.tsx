@@ -1,6 +1,6 @@
-import { ProductListSearch } from "./ProductListSearch";
-import { ProductListResults } from "./ProductListResults";
-import { ProductListPagination } from "./ProductListPagination";
+import { ProductListSearch } from "./components/ProductListSearch";
+import { ProductListResults } from "./components/ProductListResults";
+import { ProductListPagination } from "./components/ProductListPagination";
 
 const ProductListLayout = () => {
   return (

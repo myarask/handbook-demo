@@ -5,7 +5,7 @@ import { client } from "./clients/apollo";
 import { queryClient } from "./clients/react-query";
 import { ApolloProvider } from "@apollo/client";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { AppRouter } from "./app/router";
+import { AppRouter } from "./app/components/AppRouter";
 
 const rootElement = document.getElementById("root")!;
 const root = ReactDOM.createRoot(rootElement);
