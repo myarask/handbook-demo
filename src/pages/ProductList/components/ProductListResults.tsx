@@ -1,6 +1,6 @@
-import { ProductListItem } from "./ProductListItem";
 import { useProductListQuery } from "../server/useProductListQuery";
 import { usePrevious } from "../hooks/usePrevious";
+import { Product } from "../types/Product.types";
 
 const Loading = () => (
   <tr>
@@ -19,6 +19,16 @@ const NoResults = () => (
     <td colSpan={3}>No results found</td>
   </tr>
 );
+
+const ProductListItem = (props: Product) => {
+  return (
+    <tr key={props.id}>
+      <td>{props.title}</td>
+      <td>{props.category}</td>
+      <td>{props.price}</td>
+    </tr>
+  );
+};
 
 export const ProductListResults = () => {
   const { data, error } = useProductListQuery();
