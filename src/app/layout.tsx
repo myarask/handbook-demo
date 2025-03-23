@@ -1,12 +1,12 @@
-import { Navigation } from "../components/Navigation";
-import { App } from "./page";
+import { Outlet } from "react-router";
+import { AppNavigation } from "./components/Navigation";
 
 export const AppLayout = () => {
   return (
     <div>
-      <Navigation />
+      <AppNavigation />
       <main>
-        <App />
+        <Outlet />
       </main>
     </div>
   );
