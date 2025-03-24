@@ -8,7 +8,6 @@
   ],
   "main": "src/index.tsx",
   "dependencies": {
-    "@apollo/client": "3.13.4",
     "@tanstack/react-query": "5.68.0",
     "graphql": "16.10.0",
     "loader-utils": "3.2.1",
