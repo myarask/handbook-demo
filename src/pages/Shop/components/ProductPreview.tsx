@@ -5,7 +5,7 @@ export const ProductPreview = () => {
   const previewProductId = useProductList((state) => state.previewProductId);
 
   if (!previewProductId) {
-    throw new Error("No product selected");
+    throw new Error("Missing productId in ProductPreview");
   }
 
   const product = useProduct(previewProductId);
