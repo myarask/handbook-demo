@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "./useDebounce";
-import { useProductList } from "../controller/state";
+import { useProductList } from "../controllers/state";
 import type {
   ProductListQueryArgs,
   ProductListQueryResults,

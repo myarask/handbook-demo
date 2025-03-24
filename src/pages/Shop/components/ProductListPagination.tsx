@@ -3,8 +3,8 @@ import {
   handleGoToLastPage,
   handleGoToNextPage,
   handleGoToPreviousPage,
-} from "../controller/actions";
-import { useProductList } from "../controller/state";
+} from "../controllers/actions";
+import { useProductList } from "../controllers/state";
 
 export const ProductListPagination = () => {
   const { page } = useProductList();
