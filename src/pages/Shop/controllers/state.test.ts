@@ -1,3 +1,4 @@
+import { preview } from "vite";
 import { useProductList } from "./state";
 
 test("initial state", () => {
@@ -6,5 +7,6 @@ test("initial state", () => {
     searchTerm: "",
     pageSize: 10,
     page: 1,
+    previewProductId: null,
   });
 });

@@ -29,3 +29,7 @@ export const handleSearchProduct = (
     page: 1,
   });
 };
+
+export const showProductPreview = (productId: number) => {
+  useProductList.setState({ previewProductId: productId });
+};

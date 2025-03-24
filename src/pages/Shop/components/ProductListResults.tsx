@@ -1,6 +1,7 @@
 import { useProductListQuery } from "../hooks/useProductListQuery";
 import { usePrevious } from "../hooks/usePrevious";
 import { Product } from "../types/Product.types";
+import { showProductPreview } from "../controllers/actions";
 
 const Loading = () => (
   <tr>
@@ -22,7 +23,7 @@ const NoResults = () => (
 
 const ProductListItem = (props: Product) => {
   return (
-    <tr key={props.id}>
+    <tr key={props.id} onMouseEnter={() => showProductPreview(props.id)}>
       <td>{props.title}</td>
       <td>{props.category}</td>
       <td>{props.price}</td>
