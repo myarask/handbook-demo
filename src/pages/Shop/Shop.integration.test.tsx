@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { ProductListPage } from "./ProductListPage";
+import { ShopPage } from "./ShopPage";
 import { TestQueryClientProvider } from "../../clients/react-query.utils";
 
 test("I can browse products", async () => {
   render(
     <TestQueryClientProvider>
-      <ProductListPage />
+      <ShopPage />
     </TestQueryClientProvider>
   );
 

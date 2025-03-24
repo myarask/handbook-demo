@@ -1,13 +1,13 @@
 import { lazy, Suspense } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 
-const ProductListLayout = lazy(() => import("./ProductListLayout"));
+const ShopLayout = lazy(() => import("./ShopLayout"));
 
-export const ProductListPage = () => {
+export const ShopPage = () => {
   return (
     <ErrorBoundary>
       <Suspense>
-        <ProductListLayout />
+        <ShopLayout />
       </Suspense>
     </ErrorBoundary>
   );

@@ -6,7 +6,7 @@ import { ProductListSearch } from "./components/ProductListSearch";
 import { ProductListResults } from "./components/ProductListResults";
 import { ProductListPagination } from "./components/ProductListPagination";
 
-export const ProductListLayout = () => {
+export const ShopLayout = () => {
   const previewProductId = useProductList((state) => state.previewProductId);
 
   return (
@@ -40,4 +40,4 @@ export const ProductListLayout = () => {
   );
 };
 
-export default ProductListLayout;
+export default ShopLayout;
