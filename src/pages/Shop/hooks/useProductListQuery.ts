@@ -7,9 +7,9 @@ import type {
 } from "../types/Product.types";
 
 const fetcher = async ({
-  limit,
-  searchTerm,
-  offset,
+  limit = 10,
+  searchTerm = "",
+  offset = 0,
 }: ProductListQueryArgs): Promise<ProductListQueryResults> => {
   const params = `limit=${limit}&q=${searchTerm}&skip=${offset}`;
 

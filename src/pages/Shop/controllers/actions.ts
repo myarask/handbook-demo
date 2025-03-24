@@ -37,3 +37,7 @@ export const showProductPreview = (productId: number) => {
 export const showBuyNowModal = (productId: number) => {
   useShop.setState({ buyNowProductId: productId });
 };
+
+export const hideBuyNowModal = () => {
+  useShop.setState({ buyNowProductId: null });
+};

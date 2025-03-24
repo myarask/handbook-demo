@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 
-const Layout = lazy(() => import("./ShopLayout"));
+const Layout = lazy(() => import("./OrderConfirmationLayout"));
 
-export const ShopPage = () => {
+export const OrderConfirmationPage = () => {
   return (
-    <ErrorBoundary fallback="Shop not available">
+    <ErrorBoundary fallback="Order Confirmation not available">
       <Suspense>
         <Layout />
       </Suspense>
