@@ -1,13 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { ShopPage } from "./ShopPage";
-import { TestQueryClientProvider } from "../../clients/react-query.utils";
+import { renderWithProviders } from "../../clients/react-query.test-utils";
 
 test("I can browse products", async () => {
-  render(
-    <TestQueryClientProvider>
-      <ShopPage />
-    </TestQueryClientProvider>
-  );
+  renderWithProviders(<ShopPage />);
 
   const products = await screen.findAllByText("fragrances");
   expect(products.length).toBe(5);
