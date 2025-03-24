@@ -1,13 +1,13 @@
 import { Suspense } from "react";
 import { ProductPreview } from "./components/ProductPreview";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import { useProductList } from "./controllers/state";
+import { useShop } from "./controllers/state";
 import { ProductListSearch } from "./components/ProductListSearch";
 import { ProductListResults } from "./components/ProductListResults";
 import { ProductListPagination } from "./components/ProductListPagination";
 
 export const ShopLayout = () => {
-  const previewProductId = useProductList((state) => state.previewProductId);
+  const previewProductId = useShop((state) => state.previewProductId);
 
   return (
     <div style={{ display: "flex" }}>

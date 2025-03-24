@@ -1,9 +1,9 @@
 import { queryClient } from "../../../clients/react-query";
-import { useProductList } from "./state";
+import { useShop } from "./state";
 import type { ProductListQueryResults } from "../types/Product.types";
 
 export const getLastPage = () => {
-  const { pageSize, searchTerm } = useProductList.getState();
+  const { pageSize, searchTerm } = useShop.getState();
   const [firstResult] = queryClient.getQueriesData<ProductListQueryResults>({
     queryKey: ["products", searchTerm],
   });

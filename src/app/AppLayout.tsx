@@ -6,7 +6,7 @@ export const AppLayout = () => {
       {/* Navigation */}
       <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/products">Products</NavLink>
+        <NavLink to="/shop">Products</NavLink>
       </nav>
       {/* Main content */}
       <main>

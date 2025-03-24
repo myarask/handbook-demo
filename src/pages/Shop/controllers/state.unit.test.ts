@@ -1,7 +1,7 @@
-import { useProductList } from "./state";
+import { useShop } from "./state";
 
 test("initial state", () => {
-  const state = useProductList.getState();
+  const state = useShop.getState();
   expect(state).toEqual({
     searchTerm: "",
     pageSize: 10,

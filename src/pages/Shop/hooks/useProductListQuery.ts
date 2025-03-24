@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "./useDebounce";
-import { useProductList } from "../controllers/state";
+import { useShop } from "../controllers/state";
 import type {
   ProductListQueryArgs,
   ProductListQueryResults,
@@ -25,7 +25,7 @@ const fetcher = async ({
 };
 
 export const useProductListQuery = () => {
-  const { searchTerm, page, pageSize } = useProductList((state) => state);
+  const { searchTerm, page, pageSize } = useShop((state) => state);
   const debouncedSearchTerm = useDebounce(searchTerm);
 
   // Debounce the search term

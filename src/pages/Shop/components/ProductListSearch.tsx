@@ -1,8 +1,8 @@
 import { handleSearchProduct } from "../controllers/actions";
-import { useProductList } from "../controllers/state";
+import { useShop } from "../controllers/state";
 
 export const ProductListSearch = () => {
-  const searchTerm = useProductList((state) => state.searchTerm);
+  const searchTerm = useShop((state) => state.searchTerm);
 
   return (
     <>

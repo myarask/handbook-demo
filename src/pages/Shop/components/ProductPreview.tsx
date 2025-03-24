@@ -1,8 +1,8 @@
-import { useProductList } from "../controllers/state";
+import { useShop } from "../controllers/state";
 import { useProduct } from "../hooks/useProduct";
 
 export const ProductPreview = () => {
-  const previewProductId = useProductList((state) => state.previewProductId);
+  const previewProductId = useShop((state) => state.previewProductId);
 
   if (!previewProductId) {
     throw new Error("Missing productId in ProductPreview");

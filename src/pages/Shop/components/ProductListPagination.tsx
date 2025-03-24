@@ -4,10 +4,10 @@ import {
   goToNextPage,
   goToPreviousPage,
 } from "../controllers/actions";
-import { useProductList } from "../controllers/state";
+import { useShop } from "../controllers/state";
 
 export const ProductListPagination = () => {
-  const { page } = useProductList();
+  const { page } = useShop();
 
   return (
     <tr>

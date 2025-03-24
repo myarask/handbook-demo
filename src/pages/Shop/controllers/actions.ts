@@ -1,22 +1,22 @@
-import { useProductList } from "./state";
+import { useShop } from "./state";
 import { getLastPage } from "./utils";
 
 export const goToFirstPage = () => {
-  useProductList.setState({ page: 1 });
+  useShop.setState({ page: 1 });
 };
 
 export const goToLastPage = () => {
-  useProductList.setState({ page: getLastPage() });
+  useShop.setState({ page: getLastPage() });
 };
 
 export const goToNextPage = () => {
-  useProductList.setState((state) => ({
+  useShop.setState((state) => ({
     page: Math.min(getLastPage(), state.page + 1),
   }));
 };
 
 export const goToPreviousPage = () => {
-  useProductList.setState((state) => ({
+  useShop.setState((state) => ({
     page: Math.max(1, state.page - 1),
   }));
 };
@@ -24,12 +24,12 @@ export const goToPreviousPage = () => {
 export const handleSearchProduct = (
   event: React.ChangeEvent<HTMLInputElement>
 ) => {
-  useProductList.setState({
+  useShop.setState({
     searchTerm: event.target.value,
     page: 1,
   });
 };
 
 export const showProductPreview = (productId: number) => {
-  useProductList.setState({ previewProductId: productId });
+  useShop.setState({ previewProductId: productId });
 };
