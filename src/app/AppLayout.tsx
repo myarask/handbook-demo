@@ -5,7 +5,6 @@ export const AppLayout = () => {
     <div>
       <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/mission">Last Mission</NavLink>
         <NavLink to="/products">Products</NavLink>
       </nav>
       <main>

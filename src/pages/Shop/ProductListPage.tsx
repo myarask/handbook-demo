@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import ErrorBoundary from "../../components/ErrorBoundary";
 
-const ProductListLayout = lazy(() => import("./layout"));
+const ProductListLayout = lazy(() => import("./ProductListLayout"));
 
 export const ProductListPage = () => {
   return (
