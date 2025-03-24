@@ -1,4 +1,4 @@
-import { useProductListQuery } from "../server/useProductListQuery";
+import { useProductListQuery } from "../hooks/useProductListQuery";
 import { usePrevious } from "../hooks/usePrevious";
 import { Product } from "../types/Product.types";
 

@@ -1,16 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import { useDebounce } from "../hooks/useDebounce";
+import { useDebounce } from "./useDebounce";
 import { useProductList } from "../controller/state";
-import {
-  ProductListQueryArgs,
-  ProductListQueryResults,
-} from "./useProductListQuery.types";
+import { Product } from "../types/Product.types";
 
 const fetcher = async ({
   limit,
   searchTerm,
   offset,
-}: ProductListQueryArgs): Promise<ProductListQueryResults> => {
+}: {
+  limit: number;
+  searchTerm: string;
+  offset: number;
+}): Promise<{
+  limit: number;
+  skip: number;
+  total: number;
+  products: Product[];
+}> => {
   const params = `limit=${limit}&q=${searchTerm}&skip=${offset}`;
 
   const res = await fetch(`https://dummyjson.com/products/search?${params}`, {
