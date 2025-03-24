@@ -1,6 +1,6 @@
 import { queryClient } from "../../../clients/react-query";
 import { useProductList } from "./state";
-import type { ProductListQueryResults } from "../server/useProductListQuery.types";
+import type { ProductListQueryResults } from "../types/Product.types";
 
 export const getLastPage = () => {
   const { pageSize, searchTerm } = useProductList.getState();

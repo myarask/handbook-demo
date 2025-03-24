@@ -37,3 +37,16 @@ export type Product = {
   images: string[];
   thumbnail: string;
 };
+
+export type ProductListQueryResults = {
+  limit: number;
+  skip: number;
+  total: number;
+  products: Product[];
+};
+
+export type ProductListQueryArgs = {
+  limit: number;
+  searchTerm: string;
+  offset: number;
+};
