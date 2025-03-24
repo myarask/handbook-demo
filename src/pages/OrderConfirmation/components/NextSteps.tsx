@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { RoutePath } from "../../../app/AppRouter.constants";
 
 export const NextSteps = () => {
   return (
@@ -10,7 +11,7 @@ export const NextSteps = () => {
       </p>
       <p>
         While you wait, the shop is always open.{" "}
-        <Link to="/shop">Shop now</Link>!
+        <Link to={RoutePath.shop}>Shop now</Link>!
       </p>
     </div>
   );

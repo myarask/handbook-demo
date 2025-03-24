@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { hideBuyNowModal } from "../controllers/actions";
 import { useShop } from "../controllers/state";
+import { RoutePath } from "../../../app/AppRouter.constants";
 
 export const BuyNowModal = () => {
   const productId = useShop((state) => state.buyNowProductId);
@@ -8,7 +9,7 @@ export const BuyNowModal = () => {
   return (
     <dialog open={Boolean(productId)}>
       <h2>Buy Now?</h2>
-      <Link to="/order-confirmation">
+      <Link to={RoutePath.orderConfirmation}>
         <button>Yes, Buy Now!</button>
       </Link>
 
