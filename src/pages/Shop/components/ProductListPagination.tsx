@@ -1,8 +1,8 @@
 import {
-  handleGoToFirstPage,
-  handleGoToLastPage,
-  handleGoToNextPage,
-  handleGoToPreviousPage,
+  goToFirstPage,
+  goToLastPage,
+  goToNextPage,
+  goToPreviousPage,
 } from "../controllers/actions";
 import { useProductList } from "../controllers/state";
 
@@ -12,20 +12,17 @@ export const ProductListPagination = () => {
   return (
     <tr>
       <td colSpan={3}>
-        <button onClick={handleGoToFirstPage} aria-label="Go to the first page">
+        <button onClick={goToFirstPage} aria-label="Go to the first page">
           {"<<"}
         </button>
-        <button
-          onClick={handleGoToPreviousPage}
-          aria-label="Go to the previous page"
-        >
+        <button onClick={goToPreviousPage} aria-label="Go to the previous page">
           {"<"}
         </button>
         <button>{page}</button>
-        <button onClick={handleGoToNextPage} aria-label="Go to the next page">
+        <button onClick={goToNextPage} aria-label="Go to the next page">
           {">"}
         </button>
-        <button onClick={handleGoToLastPage} aria-label="Go to the last page">
+        <button onClick={goToLastPage} aria-label="Go to the last page">
           {">>"}
         </button>
       </td>

@@ -1,21 +1,21 @@
 import { useProductList } from "./state";
 import { getLastPage } from "./utils";
 
-export const handleGoToFirstPage = () => {
+export const goToFirstPage = () => {
   useProductList.setState({ page: 1 });
 };
 
-export const handleGoToLastPage = () => {
+export const goToLastPage = () => {
   useProductList.setState({ page: getLastPage() });
 };
 
-export const handleGoToNextPage = () => {
+export const goToNextPage = () => {
   useProductList.setState((state) => ({
     page: Math.min(getLastPage(), state.page + 1),
   }));
 };
 
-export const handleGoToPreviousPage = () => {
+export const goToPreviousPage = () => {
   useProductList.setState((state) => ({
     page: Math.max(1, state.page - 1),
   }));
