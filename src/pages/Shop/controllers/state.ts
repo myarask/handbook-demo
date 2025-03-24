@@ -5,9 +5,11 @@ export const useShop = create<{
   pageSize: number;
   page: number;
   previewProductId: number | null;
+  buyNowProductId: number | null;
 }>()(() => ({
   searchTerm: "",
   pageSize: 10,
   page: 1,
   previewProductId: null,
+  buyNowProductId: null,
 }));

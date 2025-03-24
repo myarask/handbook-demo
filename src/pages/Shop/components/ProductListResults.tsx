@@ -1,7 +1,7 @@
 import { useProductListQuery } from "../hooks/useProductListQuery";
 import { usePrevious } from "../hooks/usePrevious";
 import { Product } from "../types/Product.types";
-import { showProductPreview } from "../controllers/actions";
+import { showBuyNowModal, showProductPreview } from "../controllers/actions";
 
 const Loading = () => (
   <tr>
@@ -27,6 +27,9 @@ const ProductListItem = (props: Product) => {
       <td>{props.title}</td>
       <td>{props.category}</td>
       <td>{props.price}</td>
+      <td>
+        <button onClick={() => showBuyNowModal(props.id)}>Buy Now</button>
+      </td>
     </tr>
   );
 };

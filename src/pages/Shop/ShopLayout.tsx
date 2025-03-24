@@ -5,6 +5,7 @@ import { useShop } from "./controllers/state";
 import { ProductListSearch } from "./components/ProductListSearch";
 import { ProductListResults } from "./components/ProductListResults";
 import { ProductListPagination } from "./components/ProductListPagination";
+import { BuyNowModal } from "./components/BuyNowModal";
 
 export const ShopLayout = () => {
   const previewProductId = useShop((state) => state.previewProductId);
@@ -19,6 +20,7 @@ export const ShopLayout = () => {
               <th>Title</th>
               <th>Category</th>
               <th>Price</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -30,12 +32,17 @@ export const ShopLayout = () => {
         </table>
       </span>
       {previewProductId && (
-        <ErrorBoundary>
+        <ErrorBoundary fallback="Product Preview not available">
           <Suspense>
             <ProductPreview />
           </Suspense>
         </ErrorBoundary>
       )}
+      <ErrorBoundary fallback="Buy Now not available">
+        <Suspense>
+          <BuyNowModal />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

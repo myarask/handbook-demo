@@ -33,3 +33,7 @@ export const handleSearchProduct = (
 export const showProductPreview = (productId: number) => {
   useShop.setState({ previewProductId: productId });
 };
+
+export const showBuyNowModal = (productId: number) => {
+  useShop.setState({ buyNowProductId: productId });
+};
