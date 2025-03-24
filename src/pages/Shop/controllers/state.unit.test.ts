@@ -1,4 +1,3 @@
-import { preview } from "vite";
 import { useProductList } from "./state";
 
 test("initial state", () => {
