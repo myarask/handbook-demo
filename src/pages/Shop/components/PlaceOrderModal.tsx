@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { cancelOrder } from "../controllers/actions";
 import { useShop } from "../controllers/state";
-import { RoutePath } from "../../../app/AppRouter.constants";
+import { paths } from "../../../app/AppRouter.constants";
 
 export const PlaceOrderModal = () => {
   const hasIntent = useShop((state) => state.buying.hasIntent);
@@ -9,7 +9,7 @@ export const PlaceOrderModal = () => {
   return (
     <dialog open={hasIntent}>
       <h2>Buy Now?</h2>
-      <Link to={RoutePath.orderConfirmation}>
+      <Link to={paths.order.confirmation.replace(":orderId", "123")}>
         <button>Yes, Buy Now!</button>
       </Link>
 

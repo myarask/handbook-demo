@@ -1,5 +1,7 @@
-export const enum RoutePath {
-  home = "/",
-  shop = "/shop",
-  orderConfirmation = "/order-confirmation",
-}
+export const paths = {
+  home: "/",
+  shop: "/shop",
+  order: {
+    confirmation: "/order/:orderId/confirmation",
+  },
+};
