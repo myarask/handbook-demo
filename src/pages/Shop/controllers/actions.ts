@@ -1,3 +1,5 @@
+import { queryClient } from "../../../clients/react-query";
+import { Product } from "../types/Product.types";
 import { useShop } from "./state";
 import { getLastPage } from "./utils";
 
@@ -30,11 +32,13 @@ export const handleSearchProduct = (
   });
 };
 
-export const reviewProduct = (productId: number) => {
+export const reviewProduct = (product: Product) => {
+  queryClient.setQueryData(["product", product.id], product);
+
   useShop.setState({
     reviewing: {
       hasShownInterest: true,
-      productId,
+      productId: product.id,
     },
   });
 };

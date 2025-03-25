@@ -9,12 +9,12 @@ const FullRow = ({ children }: { children: React.ReactNode }) => (
   </tr>
 );
 
-const ProductListItem = (props: Product) => {
+const ProductListItem = (product: Product) => {
   return (
-    <tr key={props.id} onMouseEnter={() => reviewProduct(props.id)}>
-      <td>{props.title}</td>
-      <td>{props.category}</td>
-      <td>{props.price}</td>
+    <tr key={product.id} onMouseEnter={() => reviewProduct(product)}>
+      <td>{product.title}</td>
+      <td>{product.category}</td>
+      <td>{product.price}</td>
       <td>
         <button onClick={placeOrder}>Place Order</button>
       </td>

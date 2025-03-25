@@ -49,7 +49,7 @@ test("handleSearchProduct", () => {
 
 test("showProductPreview", () => {
   useShop.setState({ reviewing: { hasShownInterest: false, productId: null } });
-  reviewProduct(1);
+  reviewProduct({ id: 1 } as any);
   expect(useShop.getState().reviewing).toStrictEqual({
     hasShownInterest: true,
     productId: 1,
