@@ -4,7 +4,7 @@ import { useShop } from "../controllers/state";
 import { RoutePath } from "../../../app/AppRouter.constants";
 
 export const BuyNowModal = () => {
-  const productId = useShop((state) => state.buyNowProductId);
+  const productId = useShop((state) => state.buying.productId);
 
   return (
     <dialog open={Boolean(productId)}>

@@ -3,7 +3,7 @@ import type { Order } from "../types/Order.types";
 
 const fetcher = async (): Promise<Order> => {
   // Custom endpoint for fetching the "latest order"
-  const res = await fetch(`https://dummyjson.com/c/eaba-a1fa-479e-a9f7`, {
+  const res = await fetch("https://dummyjson.com/c/eaba-a1fa-479e-a9f7", {
     headers: { "Content-Type": "application/json" },
   });
 

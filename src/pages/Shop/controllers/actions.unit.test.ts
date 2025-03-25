@@ -48,7 +48,10 @@ test("handleSearchProduct", () => {
 });
 
 test("showProductPreview", () => {
-  useShop.setState({ previewProductId: null });
+  useShop.setState({ reviewing: { hasShownInterest: false, productId: null } });
   showProductPreview(1);
-  expect(useShop.getState().previewProductId).toBe(1);
+  expect(useShop.getState().reviewing).toStrictEqual({
+    hasShownInterest: true,
+    productId: 1,
+  });
 });

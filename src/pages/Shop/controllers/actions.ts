@@ -31,13 +31,28 @@ export const handleSearchProduct = (
 };
 
 export const showProductPreview = (productId: number) => {
-  useShop.setState({ previewProductId: productId });
+  useShop.setState({
+    reviewing: {
+      hasShownInterest: true,
+      productId,
+    },
+  });
 };
 
 export const showBuyNowModal = (productId: number) => {
-  useShop.setState({ buyNowProductId: productId });
+  useShop.setState({
+    buying: {
+      hasShownIntent: true,
+      productId,
+    },
+  });
 };
 
 export const hideBuyNowModal = () => {
-  useShop.setState({ buyNowProductId: null });
+  useShop.setState({
+    buying: {
+      hasShownIntent: false,
+      productId: null,
+    },
+  });
 };

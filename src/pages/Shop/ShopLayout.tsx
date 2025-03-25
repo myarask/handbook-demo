@@ -8,7 +8,7 @@ import { ProductListPagination } from "./components/ProductListPagination";
 import { BuyNowModal } from "./components/BuyNowModal";
 
 export const ShopLayout = () => {
-  const previewProductId = useShop((state) => state.previewProductId);
+  const hasShownInterest = useShop((state) => state.reviewing.hasShownInterest);
 
   return (
     <div style={{ display: "flex" }}>
@@ -31,7 +31,7 @@ export const ShopLayout = () => {
           </tfoot>
         </table>
       </span>
-      {previewProductId && (
+      {hasShownInterest && (
         <ErrorBoundary fallback="Product Preview not available">
           <Suspense>
             <ProductPreview />
