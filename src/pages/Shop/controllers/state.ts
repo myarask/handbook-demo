@@ -9,7 +9,7 @@ export const useShop = create<{
     productId: number | null;
   };
   buying: {
-    hasShownIntent: boolean;
+    hasIntent: boolean;
     productId: number | null;
   };
 }>()(() => ({
@@ -21,7 +21,7 @@ export const useShop = create<{
     productId: null,
   },
   buying: {
-    hasShownIntent: false,
+    hasIntent: false,
     productId: null,
   },
 }));

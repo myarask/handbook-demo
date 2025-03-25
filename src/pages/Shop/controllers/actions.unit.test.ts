@@ -4,7 +4,7 @@ import {
   goToNextPage,
   goToPreviousPage,
   handleSearchProduct,
-  showProductPreview,
+  reviewProduct,
 } from "./actions";
 import { useShop } from "./state";
 import { getLastPage } from "./utils";
@@ -49,7 +49,7 @@ test("handleSearchProduct", () => {
 
 test("showProductPreview", () => {
   useShop.setState({ reviewing: { hasShownInterest: false, productId: null } });
-  showProductPreview(1);
+  reviewProduct(1);
   expect(useShop.getState().reviewing).toStrictEqual({
     hasShownInterest: true,
     productId: 1,

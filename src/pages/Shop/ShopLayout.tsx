@@ -5,7 +5,7 @@ import { useShop } from "./controllers/state";
 import { ProductListSearch } from "./components/ProductListSearch";
 import { ProductListResults } from "./components/ProductListResults";
 import { ProductListPagination } from "./components/ProductListPagination";
-import { BuyNowModal } from "./components/BuyNowModal";
+import { PlaceOrderModal } from "./components/PlaceOrderModal";
 
 export const ShopLayout = () => {
   const hasShownInterest = useShop((state) => state.reviewing.hasShownInterest);
@@ -32,15 +32,15 @@ export const ShopLayout = () => {
         </table>
       </span>
       {hasShownInterest && (
-        <ErrorBoundary fallback="Product Preview not available">
+        <ErrorBoundary fallback="Product preview is currently not available">
           <Suspense>
             <ProductPreview />
           </Suspense>
         </ErrorBoundary>
       )}
-      <ErrorBoundary fallback="Buy Now not available">
+      <ErrorBoundary fallback="Order placement is currently not available">
         <Suspense>
-          <BuyNowModal />
+          <PlaceOrderModal />
         </Suspense>
       </ErrorBoundary>
     </div>

@@ -1,7 +1,7 @@
 import { useProductListQuery } from "../hooks/useProductListQuery";
 import { usePrevious } from "../hooks/usePrevious";
 import { Product } from "../types/Product.types";
-import { showBuyNowModal, showProductPreview } from "../controllers/actions";
+import { placeOrder, reviewProduct } from "../controllers/actions";
 
 const FullRow = ({ children }: { children: React.ReactNode }) => (
   <tr>
@@ -11,12 +11,12 @@ const FullRow = ({ children }: { children: React.ReactNode }) => (
 
 const ProductListItem = (props: Product) => {
   return (
-    <tr key={props.id} onMouseEnter={() => showProductPreview(props.id)}>
+    <tr key={props.id} onMouseEnter={() => reviewProduct(props.id)}>
       <td>{props.title}</td>
       <td>{props.category}</td>
       <td>{props.price}</td>
       <td>
-        <button onClick={() => showBuyNowModal(props.id)}>Buy Now</button>
+        <button onClick={placeOrder}>Place Order</button>
       </td>
     </tr>
   );

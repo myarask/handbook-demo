@@ -30,7 +30,7 @@ export const handleSearchProduct = (
   });
 };
 
-export const showProductPreview = (productId: number) => {
+export const reviewProduct = (productId: number) => {
   useShop.setState({
     reviewing: {
       hasShownInterest: true,
@@ -39,19 +39,19 @@ export const showProductPreview = (productId: number) => {
   });
 };
 
-export const showBuyNowModal = (productId: number) => {
-  useShop.setState({
+export const placeOrder = () => {
+  useShop.setState((state) => ({
     buying: {
-      hasShownIntent: true,
-      productId,
+      hasIntent: true,
+      productId: state.reviewing.productId,
     },
-  });
+  }));
 };
 
-export const hideBuyNowModal = () => {
+export const cancelOrder = () => {
   useShop.setState({
     buying: {
-      hasShownIntent: false,
+      hasIntent: false,
       productId: null,
     },
   });
