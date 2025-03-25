@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import { ShopPage } from "./ShopPage";
-import { renderWithProviders } from "../../clients/react-query.test-utils";
+import { renderWithProviders } from "../../utils/test-utils";
 
 test("I can browse products", async () => {
   renderWithProviders(<ShopPage />);
