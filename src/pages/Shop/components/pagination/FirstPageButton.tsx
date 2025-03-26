@@ -1,8 +1,8 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const FirstPageButton = () => {
   const handleClick = () => {
-    useShop.setState({ page: 1 });
+    usePage.setState({ page: 1 });
   };
 
   return (

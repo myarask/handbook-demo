@@ -1,11 +1,11 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 import { useLastPage } from "../../hooks/useLastPage";
 
 export const LastPageButton = () => {
   const lastPage = useLastPage();
 
   const handleClick = () => {
-    useShop.setState({ page: lastPage });
+    usePage.setState({ page: lastPage });
   };
 
   return (

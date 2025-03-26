@@ -1,8 +1,8 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const PreviousPageButton = () => {
   const handleClick = () => {
-    useShop.setState((state) => ({
+    usePage.setState((state) => ({
       page: Math.max(1, state.page - 1),
     }));
   };

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Preview } from "./components/Preview";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import { useShop } from "./ShopState";
+import { usePage } from "./ShopState";
 import { SearchInput } from "./components/SearchInput";
 import { SearchResults } from "./components/SearchResults/SearchResults";
 import { FirstPageButton } from "./components/Pagination/FirstPageButton";
@@ -12,7 +12,7 @@ import { LastPageButton } from "./components/Pagination/LastPageButton";
 import { OrderModal } from "./components/OrderModal/OrderModal";
 
 export const ShopLayout = () => {
-  const hasShownInterest = useShop((state) => state.preview.isOpen);
+  const previewIsOpen = usePage((state) => state.preview.isOpen);
 
   return (
     <div style={{ display: "flex" }}>
@@ -46,7 +46,7 @@ export const ShopLayout = () => {
           </tfoot>
         </table>
       </span>
-      {hasShownInterest && (
+      {previewIsOpen && (
         <ErrorBoundary fallback="Product preview is currently not available">
           <Suspense>
             <Preview />

@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router";
 import { paths } from "../../../../app/AppRouter.constants";
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const ConfirmOrderButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    useShop.setState({
+    usePage.setState({
       orderModal: {
         isOpen: false,
         productId: null,

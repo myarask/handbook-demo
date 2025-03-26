@@ -1,8 +1,8 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const CancelOrderButton = () => {
   const handleClick = () => {
-    useShop.setState({
+    usePage.setState({
       orderModal: {
         isOpen: false,
         productId: null,

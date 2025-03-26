@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export const useShop = create<{
+export const usePage = create<{
   searchTerm: string;
   pageSize: number;
   page: number;

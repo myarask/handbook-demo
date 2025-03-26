@@ -1,7 +1,7 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const CurrentPage = () => {
-  const { page } = useShop();
+  const { page } = usePage();
 
   return <button disabled>{page}</button>;
 };

@@ -1,8 +1,8 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 
 export const PlaceOrderButton = () => {
   const handleClick = () => {
-    useShop.setState((state) => ({
+    usePage.setState((state) => ({
       orderModal: {
         isOpen: true,
         productId: state.preview.productId,

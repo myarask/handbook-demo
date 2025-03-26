@@ -1,9 +1,9 @@
-import { useShop } from "../ShopState";
+import { usePage } from "../ShopState";
 import { usePrevious } from "./usePrevious";
 import { useProductListQuery } from "./useProductListQuery";
 
 export const useLastPage = () => {
-  const pageSize = useShop((state) => state.pageSize);
+  const pageSize = usePage((state) => state.pageSize);
   const { data } = useProductListQuery();
   const previousData = usePrevious(data);
 

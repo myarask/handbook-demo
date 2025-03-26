@@ -1,9 +1,9 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 import { CancelOrderButton } from "./CancelOrderButton";
 import { ConfirmOrderButton } from "./ConfirmOrderButton";
 
 export const OrderModal = () => {
-  const isOpen = useShop((state) => state.orderModal.isOpen);
+  const isOpen = usePage((state) => state.orderModal.isOpen);
 
   return (
     <dialog open={isOpen}>

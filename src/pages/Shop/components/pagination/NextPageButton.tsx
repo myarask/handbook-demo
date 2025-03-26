@@ -1,11 +1,11 @@
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 import { useLastPage } from "../../hooks/useLastPage";
 
 export const NextPageButton = () => {
   const lastPage = useLastPage();
 
   const handleClick = () => {
-    useShop.setState((state) => ({
+    usePage.setState((state) => ({
       page: Math.min(lastPage, state.page + 1),
     }));
   };

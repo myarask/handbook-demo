@@ -1,5 +1,5 @@
 import { queryClient } from "../../../../clients/react-query";
-import { useShop } from "../../ShopState";
+import { usePage } from "../../ShopState";
 import type { Product } from "../../types/Product.types";
 import { PlaceOrderButton } from "./PlaceOrderButton";
 
@@ -7,7 +7,7 @@ export const ProductRow = (product: Product) => {
   const handleMouseEnter = () => {
     queryClient.setQueryData(["product", product.id], product);
 
-    useShop.setState({
+    usePage.setState({
       preview: {
         isOpen: true,
         productId: product.id,

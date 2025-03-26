@@ -1,8 +1,8 @@
-import { useShop } from "../ShopState";
+import { usePage } from "../ShopState";
 import { useProduct } from "../hooks/useProduct";
 
 export const Preview = () => {
-  const productId = useShop((state) => state.preview.productId);
+  const productId = usePage((state) => state.preview.productId);
 
   if (!productId) {
     throw new Error("Missing productId in the Preview panel");

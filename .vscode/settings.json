@@ -3,5 +3,6 @@
     {
       "text": "Apply the following instructions to unit testing only: Use vitest for testing. Do not use describe blocks. Write one test per return statement. Write one test per thrown error. Do not test the same outcome twice. Use vi.mock instead of vi.spyOn. Do not use jest. Colocate the test with the file being tested. Avoid using beforeEach, beforeAll, afterEach, and afterAll. When creating unit tests, mock as much as possible. When creating integration tests, mock as little as possible. Do not use a factory with vi.mock. Do not import expect or it from vitest"
     }
-  ]
+  ],
+  "editor.foldingImportsByDefault": true
 }
