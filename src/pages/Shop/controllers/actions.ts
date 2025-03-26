@@ -12,21 +12,3 @@ export const reviewProduct = (product: Product) => {
     },
   });
 };
-
-export const placeOrder = () => {
-  useShop.setState((state) => ({
-    orderModal: {
-      isOpen: true,
-      productId: state.preview.productId,
-    },
-  }));
-};
-
-export const cancelOrder = () => {
-  useShop.setState({
-    orderModal: {
-      isOpen: false,
-      productId: null,
-    },
-  });
-};
