@@ -1,14 +1,17 @@
 import { useShop } from "../controllers/state";
 import { useProduct } from "../hooks/useProduct";
 
-export const ProductPreview = () => {
+export const Preview = () => {
   const productId = useShop((state) => state.preview.productId);
 
   if (!productId) {
-    throw new Error("Missing productId in ProductPreview");
+    throw new Error("Missing productId in the Preview panel");
   }
 
   const product = useProduct(productId);
+  const src = product.images?.[0];
 
-  return <img src={product.images[0]} height="200px" width="200px" />;
+  if (!src) return null;
+
+  return <img src={src} height="200px" width="200px" />;
 };

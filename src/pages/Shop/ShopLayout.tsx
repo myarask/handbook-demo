@@ -1,9 +1,9 @@
 import { Suspense } from "react";
-import { ProductPreview } from "./components/ProductPreview";
+import { Preview } from "./components/Preview";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import { useShop } from "./controllers/state";
 import { SearchInput } from "./components/SearchInput";
-import { SearchResults } from "./components/SearchResults";
+import { SearchResults } from "./components/SearchResults/SearchResults";
 import { FirstPageButton } from "./components/Pagination/FirstPageButton";
 import { PreviousPageButton } from "./components/Pagination/PreviousPageButton";
 import { NextPageButton } from "./components/Pagination/NextPageButton";
@@ -49,7 +49,7 @@ export const ShopLayout = () => {
       {hasShownInterest && (
         <ErrorBoundary fallback="Product preview is currently not available">
           <Suspense>
-            <ProductPreview />
+            <Preview />
           </Suspense>
         </ErrorBoundary>
       )}
