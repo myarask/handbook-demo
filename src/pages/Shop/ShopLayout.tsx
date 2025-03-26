@@ -3,16 +3,16 @@ import { ProductPreview } from "./components/ProductPreview";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import { useShop } from "./controllers/state";
 import { SearchInput } from "./components/SearchInput";
-import { ProductListResults } from "./components/ProductListResults";
-import { FirstPageButton } from "./components/pagination/FirstPageButton";
-import { PreviousPageButton } from "./components/pagination/PreviousPageButton";
-import { NextPageButton } from "./components/pagination/NextPageButton";
-import { CurrentPage } from "./components/pagination/CurrentPage";
-import { LastPageButton } from "./components/pagination/LastPageButton";
-import { PlaceOrderModal } from "./components/PlaceOrderModal";
+import { SearchResults } from "./components/SearchResults";
+import { FirstPageButton } from "./components/Pagination/FirstPageButton";
+import { PreviousPageButton } from "./components/Pagination/PreviousPageButton";
+import { NextPageButton } from "./components/Pagination/NextPageButton";
+import { CurrentPage } from "./components/Pagination/CurrentPage";
+import { LastPageButton } from "./components/Pagination/LastPageButton";
+import { OrderModal } from "./components/OrderModal/OrderModal";
 
 export const ShopLayout = () => {
-  const hasShownInterest = useShop((state) => state.reviewing.hasShownInterest);
+  const hasShownInterest = useShop((state) => state.preview.isOpen);
 
   return (
     <div style={{ display: "flex" }}>
@@ -31,7 +31,7 @@ export const ShopLayout = () => {
             </tr>
           </thead>
           <tbody>
-            <ProductListResults />
+            <SearchResults />
           </tbody>
           <tfoot>
             <tr>
@@ -56,7 +56,7 @@ export const ShopLayout = () => {
       {/* Modals */}
       <ErrorBoundary fallback="Order placement is currently not available">
         <Suspense>
-          <PlaceOrderModal />
+          <OrderModal />
         </Suspense>
       </ErrorBoundary>
     </div>

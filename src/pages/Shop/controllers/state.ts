@@ -4,24 +4,24 @@ export const useShop = create<{
   searchTerm: string;
   pageSize: number;
   page: number;
-  reviewing: {
-    hasShownInterest: boolean;
+  preview: {
+    isOpen: boolean;
     productId: number | null;
   };
-  buying: {
-    hasIntent: boolean;
+  orderModal: {
+    isOpen: boolean;
     productId: number | null;
   };
 }>()(() => ({
   searchTerm: "",
   pageSize: 10,
   page: 1,
-  reviewing: {
-    hasShownInterest: false,
+  preview: {
+    isOpen: false,
     productId: null,
   },
-  buying: {
-    hasIntent: false,
+  orderModal: {
+    isOpen: false,
     productId: null,
   },
 }));
