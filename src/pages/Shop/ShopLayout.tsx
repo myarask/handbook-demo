@@ -4,7 +4,11 @@ import ErrorBoundary from "../../components/ErrorBoundary";
 import { useShop } from "./controllers/state";
 import { ProductListSearch } from "./components/ProductListSearch";
 import { ProductListResults } from "./components/ProductListResults";
-import { ProductListPagination } from "./components/ProductListPagination";
+import { FirstPageButton } from "./components/pagination/FirstPageButton";
+import { PreviousPageButton } from "./components/pagination/PreviousPageButton";
+import { NextPageButton } from "./components/pagination/NextPageButton";
+import { CurrentPage } from "./components/pagination/CurrentPage";
+import { LastPageButton } from "./components/pagination/LastPageButton";
 import { PlaceOrderModal } from "./components/PlaceOrderModal";
 
 export const ShopLayout = () => {
@@ -27,7 +31,15 @@ export const ShopLayout = () => {
             <ProductListResults />
           </tbody>
           <tfoot>
-            <ProductListPagination />
+            <tr>
+              <td colSpan={3}>
+                <FirstPageButton />
+                <PreviousPageButton />
+                <CurrentPage />
+                <NextPageButton />
+                <LastPageButton />
+              </td>
+            </tr>
           </tfoot>
         </table>
       </span>
@@ -38,6 +50,7 @@ export const ShopLayout = () => {
           </Suspense>
         </ErrorBoundary>
       )}
+      {/* Modals */}
       <ErrorBoundary fallback="Order placement is currently not available">
         <Suspense>
           <PlaceOrderModal />
