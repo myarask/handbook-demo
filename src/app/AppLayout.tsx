@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 import { paths } from "./AppRouter.constants";
 
 export const AppLayout = () => {
@@ -6,8 +6,8 @@ export const AppLayout = () => {
     <div>
       {/* Navigation */}
       <nav>
-        <NavLink to={paths.home}>Home</NavLink>
-        <NavLink to={paths.shop}>Shop</NavLink>
+        <Link to={paths.home}>Home</Link>
+        <Link to={paths.shop}>Shop</Link>
       </nav>
       {/* Main content */}
       <main>
