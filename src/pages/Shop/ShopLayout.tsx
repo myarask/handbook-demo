@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Preview } from "./components/Preview";
 import ErrorBoundary from "../../components/ErrorBoundary";
-import { useShop } from "./controllers/state";
+import { useShop } from "./ShopState";
 import { SearchInput } from "./components/SearchInput";
 import { SearchResults } from "./components/SearchResults/SearchResults";
 import { FirstPageButton } from "./components/Pagination/FirstPageButton";

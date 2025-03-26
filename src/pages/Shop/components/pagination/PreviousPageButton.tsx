@@ -1,4 +1,4 @@
-import { useShop } from "../../controllers/state";
+import { useShop } from "../../ShopState";
 
 export const PreviousPageButton = () => {
   const handleClick = () => {

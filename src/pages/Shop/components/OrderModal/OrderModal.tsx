@@ -1,4 +1,4 @@
-import { useShop } from "../../controllers/state";
+import { useShop } from "../../ShopState";
 import { CancelOrderButton } from "./CancelOrderButton";
 import { ConfirmOrderButton } from "./ConfirmOrderButton";
 

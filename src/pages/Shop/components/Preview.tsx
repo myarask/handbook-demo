@@ -1,4 +1,4 @@
-import { useShop } from "../controllers/state";
+import { useShop } from "../ShopState";
 import { useProduct } from "../hooks/useProduct";
 
 export const Preview = () => {

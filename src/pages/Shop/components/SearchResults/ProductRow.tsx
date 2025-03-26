@@ -1,5 +1,5 @@
 import { queryClient } from "../../../../clients/react-query";
-import { useShop } from "../../controllers/state";
+import { useShop } from "../../ShopState";
 import type { Product } from "../../types/Product.types";
 import { PlaceOrderButton } from "./PlaceOrderButton";
 

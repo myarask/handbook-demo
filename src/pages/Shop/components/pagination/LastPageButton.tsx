@@ -1,9 +1,11 @@
-import { useShop } from "../../controllers/state";
-import { getLastPage } from "../../controllers/utils";
+import { useShop } from "../../ShopState";
+import { useLastPage } from "../../hooks/useLastPage";
 
 export const LastPageButton = () => {
+  const lastPage = useLastPage();
+
   const handleClick = () => {
-    useShop.setState({ page: getLastPage() });
+    useShop.setState({ page: lastPage });
   };
 
   return (
