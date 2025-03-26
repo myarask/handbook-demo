@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { ProductPreview } from "./components/ProductPreview";
 import ErrorBoundary from "../../components/ErrorBoundary";
 import { useShop } from "./controllers/state";
-import { ProductListSearch } from "./components/ProductListSearch";
+import { SearchInput } from "./components/SearchInput";
 import { ProductListResults } from "./components/ProductListResults";
 import { FirstPageButton } from "./components/pagination/FirstPageButton";
 import { PreviousPageButton } from "./components/pagination/PreviousPageButton";
@@ -17,7 +17,10 @@ export const ShopLayout = () => {
   return (
     <div style={{ display: "flex" }}>
       <span>
-        <ProductListSearch />
+        <label>
+          Search
+          <SearchInput />
+        </label>
         <table>
           <thead>
             <tr>
