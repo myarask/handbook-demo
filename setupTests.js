@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom";
 import { expect, vi, test } from "vitest";
 import { setupServer } from "msw/node";
 
