@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { paths } from "../../../../app/AppRouter.constants";
 import { useShop } from "../../ShopState";
 
