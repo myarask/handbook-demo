@@ -6,8 +6,8 @@ globalThis.expect = expect;
 globalThis.vi = vi;
 globalThis.test = test;
 
-const server = setupServer();
+// const server = setupServer();
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+// beforeAll(() => server.listen());
+// afterEach(() => server.resetHandlers());
+// afterAll(() => server.close());

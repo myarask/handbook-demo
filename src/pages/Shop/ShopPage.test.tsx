@@ -1,7 +1,14 @@
 import { screen } from "@testing-library/react";
-import { ShopPage } from "./ShopPage";
-import { renderWithProviders } from "../../utils/test-utils";
 import userEvent from "@testing-library/user-event";
+import { renderWithProviders } from "../../utils/test-utils";
+import { ShopPage } from "./ShopPage";
+import { usePage } from "./ShopState";
+
+import "./mocks/server";
+
+beforeEach(() => {
+  usePage.setState(usePage.getInitialState());
+});
 
 test("I can browse products", async () => {
   renderWithProviders(<ShopPage />);
@@ -53,6 +60,8 @@ test("I can browse products", async () => {
 });
 
 test("I can place an order", async () => {
+  const pushState = vi.spyOn(history, "pushState");
+
   renderWithProviders(<ShopPage />);
 
   const orderButton = await screen.findAllByRole("button", {
@@ -64,4 +73,11 @@ test("I can place an order", async () => {
     name: /buy now/i,
   });
   await userEvent.click(confirmationButton);
+
+  // Redirect to order confirmation page
+  expect(pushState).toHaveBeenCalledWith(
+    expect.any(Object),
+    "",
+    "/order/123/confirmation"
+  );
 });
