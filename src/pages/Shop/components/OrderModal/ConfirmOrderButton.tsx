@@ -16,5 +16,5 @@ export const ConfirmOrderButton = () => {
     navigate(paths.order.confirmation.replace(":orderId", "123"));
   };
 
-  return <button onClick={handleClick}>Yes, Buy Now!</button>;
+  return <button onClick={handleClick}>Confirm Order</button>;
 };

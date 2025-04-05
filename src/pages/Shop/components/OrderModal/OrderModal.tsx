@@ -7,7 +7,7 @@ export const OrderModal = () => {
 
   return (
     <dialog open={isOpen}>
-      <h2>Buy Now?</h2>
+      <h2>Please confirm the order</h2>
       <ConfirmOrderButton />
       <CancelOrderButton />
     </dialog>

@@ -10,5 +10,5 @@ export const CancelOrderButton = () => {
     });
   };
 
-  return <button onClick={handleClick}>NO, do not want</button>;
+  return <button onClick={handleClick}>Cancel Order</button>;
 };
